@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#c8a04a" />
+  <title>NAQA · ناقة — Smart Farming Assistant</title>
+  <meta name="description" content="NAQA — bilingual smart farming assistant for date palms and camel herds in Al Ain, UAE." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+
+  <!-- Google Fonts: Cairo (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/theme.css" />
+
+  <!-- QR code generator (real scannable codes) — exposes window.QRCode -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- Import map: clean bare-specifier imports, no build step required -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18.3.1",
+      "react-dom": "https://esm.sh/react-dom@18.3.1?external=react",
+      "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?external=react",
+      "htm": "https://esm.sh/htm@3.1.1",
+      "recharts": "https://esm.sh/recharts@2.12.7?external=react,react-dom"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="root">
+    <!-- Lightweight boot splash while ES modules load from CDN -->
+    <div class="boot-splash">
+      <div class="boot-logo">ناقة</div>
+      <div class="boot-sub">NAQA · loading…</div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function (reg) { console.log('[NAQA] SW registered, scope:', reg.scope); })
+          .catch(function (err) { console.warn('[NAQA] SW registration failed:', err); });
+      });
+    }
+  </script>
+  <noscript style="padding:2rem;display:block;font-family:sans-serif">NAQA requires JavaScript enabled.</noscript>
+
+</body>
+</html>

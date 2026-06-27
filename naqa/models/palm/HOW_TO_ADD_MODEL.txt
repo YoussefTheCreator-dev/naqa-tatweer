@@ -1,0 +1,33 @@
+HOW TO ADD THE PALM MODEL FILES
+================================
+
+The AI diagnosis feature requires the trained TensorFlow.js model files here.
+
+STEP 1 — Run the training notebook:
+  Open realpalmmodel.ipynb in Google Colab and run all cells (1 through 8).
+  Cell 8 will download "palm_model.zip" to your computer.
+
+STEP 2 — Extract the model files:
+  Unzip palm_model.zip. Inside you will find a "palm/" folder containing:
+    - model.json
+    - group1-shard1of1.bin  (or similar shard file(s))
+    - labels.json
+
+STEP 3 — Place the files here:
+  Copy model.json and all .bin shard files into this folder:
+    naqa/models/palm/
+
+  The folder should look like:
+    models/palm/
+      model.json          ← required
+      group1-shard1of1.bin ← required (may be split into multiple shards)
+      labels.json         ← already present
+
+STEP 4 — Restart the server:
+  Run start.bat again and open http://localhost:5173
+  The Palm AI Diagnosis card will now run the real model.
+
+NOTES:
+  - An internet connection is still needed to load TensorFlow.js (~4 MB, loaded once).
+  - The model is ~2-3 MB total for the .bin file(s).
+  - Classes detected: Dryness, Fungal disease, Healthy, Magnesium Deficiency, Scale insect.

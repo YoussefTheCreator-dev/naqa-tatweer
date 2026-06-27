@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1408"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+  <circle cx="256" cy="210" r="145" fill="none" stroke="#c8a04a" stroke-width="5" opacity="0.5"/>
+  <!-- Camel hump silhouette -->
+  <path d="M116 290 C116 290 128 234 154 222 C170 215 180 229 192 219 C202 209 198 181 214 173 C230 165 240 181 236 200 C233 213 218 219 222 233 C230 248 268 240 284 259 C298 274 294 305 298 320 C310 304 316 266 338 256 C354 248 370 262 374 282 C378 300 374 326 384 340 L116 340 Z" fill="#c8a04a"/>
+  <!-- Legs -->
+  <rect x="158" y="332" width="22" height="54" rx="8" fill="#c8a04a"/>
+  <rect x="202" y="332" width="22" height="54" rx="8" fill="#c8a04a"/>
+  <rect x="278" y="332" width="22" height="54" rx="8" fill="#c8a04a"/>
+  <rect x="322" y="332" width="22" height="54" rx="8" fill="#c8a04a"/>
+  <!-- NAQA text -->
+  <text x="256" y="444" font-family="Arial,sans-serif" font-size="52" font-weight="800" letter-spacing="14" fill="#c8a04a" text-anchor="middle" opacity="0.95">NAQA</text>
+  <!-- Arabic subtitle -->
+  <text x="256" y="490" font-family="Arial,sans-serif" font-size="26" fill="#c8a04a" text-anchor="middle" opacity="0.6">ناقة</text>
+</svg>

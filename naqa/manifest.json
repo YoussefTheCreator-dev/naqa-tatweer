@@ -1,0 +1,42 @@
+{
+  "name": "NAQA - Smart Farm Assistant",
+  "short_name": "NAQA",
+  "description": "Smart camel and palm farming dashboard for UAE farmers",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a0a",
+  "theme_color": "#c8a04a",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["productivity", "agriculture"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Camel Farm",
+      "short_name": "Camels",
+      "url": "/#/camel",
+      "description": "Open camel herd manager"
+    },
+    {
+      "name": "Palm Grove",
+      "short_name": "Palms",
+      "url": "/#/palm",
+      "description": "Open palm grove manager"
+    }
+  ]
+}
